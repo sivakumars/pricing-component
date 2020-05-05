@@ -72,17 +72,17 @@ header {
     margin: 1rem (-$default-font-size);
     z-index: 2;
     background: linear-gradient(
-      to right,
+      to bottom,
       hsl(236, 72%, 79%),
       hsl(237, 63%, 64%)
     );
     color: #fff;
     ul {
-      border-top: 1px solid $very-light-grayish-blue;
-      border-bottom: 1px solid $very-light-grayish-blue;
+      border-top: 1px solid $light-grayish-blue;
+      border-bottom: 1px solid $light-grayish-blue;
       li {
         + * {
-          border-top: 1px solid $very-light-grayish-blue;
+          border-top: 1px solid $light-grayish-blue;
         }
       }
     }

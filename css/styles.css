@@ -147,13 +147,13 @@ header h1 {
   .card.premium-card {
     margin: 1rem -15px;
     z-index: 2;
-    background: linear-gradient(to right, #a3a8f0, #696fdd);
+    background: linear-gradient(to bottom, #a3a8f0, #696fdd);
     color: #fff; }
     .card.premium-card ul {
-      border-top: 1px solid #f6f6fe;
-      border-bottom: 1px solid #f6f6fe; }
+      border-top: 1px solid #b3b5c6;
+      border-bottom: 1px solid #b3b5c6; }
       .card.premium-card ul li + * {
-        border-top: 1px solid #f6f6fe; }
+        border-top: 1px solid #b3b5c6; }
     .card.premium-card .inline-price {
       color: #f6f6fe; }
     .card.premium-card button {
