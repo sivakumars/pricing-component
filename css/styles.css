@@ -1,0 +1,191 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #f6f6fe; }
+
+body::before {
+  content: "";
+  background: url("../images/bg-top.svg") no-repeat;
+  background-position: top right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+body::after {
+  content: "";
+  background: url("../images/bg-bottom.svg") no-repeat;
+  background-position: bottom left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+:root {
+  font-size: 15px; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; }
+
+.center-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+.box-l {
+  width: 100%; }
+
+.cluster-l > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: -7.5px; }
+  .cluster-l > * > * {
+    margin: 7.5px; }
+
+.switcher-l > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: -7.5px; }
+  .switcher-l > * > * {
+    flex-grow: 1;
+    flex-basis: calc((45rem - 100%) * 999);
+    margin: 7.5px; }
+  @media screen and (max-width: 930px) {
+    .switcher-l > * {
+      flex-direction: column; } }
+
+.stack-card-l > * + * {
+  margin-top: 1.85rem; }
+
+.stack-large-l > * + * {
+  margin-top: 2.5rem; }
+
+.stack-large-l > .switcher-l {
+  margin-top: 2.6rem; }
+
+.max-width-container-u {
+  max-width: 1440px; }
+
+.padding-4rem-u {
+  padding: 4rem; }
+
+.margin-vertical {
+  margin: 20px 0; }
+  @media screen and (max-width: 930px) {
+    .margin-vertical {
+      margin: 0; } }
+
+header h1 {
+  font-size: 1.8rem;
+  color: #6d708d; }
+
+.card {
+  max-width: 20rem;
+  width: 20rem;
+  padding: 1.6rem;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #6d708d;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); }
+  @media screen and (max-width: 375px) {
+    .card {
+      width: 97%; } }
+  .card h3 {
+    font-size: 1rem;
+    text-align: center; }
+  .card ul {
+    list-style-type: none;
+    padding: 0;
+    border-top: 1px solid #b3b5c6;
+    border-bottom: 1px solid #b3b5c6; }
+    .card ul li {
+      width: 100%;
+      padding: 1rem;
+      text-align: center; }
+      .card ul li + * {
+        border-top: 1px solid #b3b5c6; }
+  .card .inline-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #494c5f; }
+    .card .inline-price > span:first-child {
+      font-size: 2em; }
+    .card .inline-price .price {
+      font-size: 4em; }
+  .card button {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px; }
+    .card button:hover {
+      opacity: 0.8; }
+  .card.premium-card {
+    margin: 1rem -15px;
+    z-index: 2;
+    background: linear-gradient(to right, #a3a8f0, #696fdd);
+    color: #fff; }
+    .card.premium-card ul {
+      border-top: 1px solid #f6f6fe;
+      border-bottom: 1px solid #f6f6fe; }
+      .card.premium-card ul li + * {
+        border-top: 1px solid #f6f6fe; }
+    .card.premium-card .inline-price {
+      color: #f6f6fe; }
+    .card.premium-card button {
+      background: #f6f6fe;
+      color: #696fdd; }
+
+.toggle-container {
+  color: #b3b5c6;
+  font-size: 1.2rem; }
+  .toggle-container .toggle {
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .toggle-container .toggle .checkbox {
+      position: absolute;
+      left: 50%; }
+    .toggle-container .toggle .label {
+      width: 3.35em;
+      height: 1.7em;
+      background: linear-gradient(to right, #a3a8f0, #696fdd);
+      border-radius: 50px;
+      cursor: pointer;
+      position: relative;
+      padding: 5px; }
+      .toggle-container .toggle .label .ball {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        background-color: #fff;
+        width: 1.5em;
+        height: 1.5em;
+        transition: transform 0.2s linear; }
+    .toggle-container .toggle .checkbox:checked + .label .ball {
+      transform: translateX(1.65em); }

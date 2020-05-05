@@ -1,0 +1,22 @@
+{
+  "name": "pricing-component",
+  "version": "1.0.0",
+  "description": "Pricing component using sass and js",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivakumars/pricing-component.git"
+  },
+  "author": "sivakumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sivakumars/pricing-component/issues"
+  },
+  "homepage": "https://github.com/sivakumars/pricing-component#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

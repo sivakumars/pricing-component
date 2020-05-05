@@ -1,0 +1,139 @@
+// Header component
+header {
+  h1 {
+    font-size: 1.8rem;
+    color: $grayish-blue;
+  }
+}
+
+// Card component
+.card {
+  @media screen and (max-width: 375px) {
+    width: 97%;
+  }
+  max-width: 20rem;
+  width: 20rem;
+  padding: 1.6rem;
+  background-color: $card-bg;
+  border-radius: 10px;
+  color: $grayish-blue;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    border-top: 1px solid $light-grayish-blue;
+    border-bottom: 1px solid $light-grayish-blue;
+    li {
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      + * {
+        border-top: 1px solid $light-grayish-blue;
+      }
+    }
+  }
+  .inline-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $dark-grayish-blue;
+    > span:first-child {
+      font-size: 2em;
+    }
+    .price {
+      font-size: 4em;
+    }
+  }
+  button {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &.premium-card {
+    margin: 1rem (-$default-font-size);
+    z-index: 2;
+    background: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    color: #fff;
+    ul {
+      border-top: 1px solid $very-light-grayish-blue;
+      border-bottom: 1px solid $very-light-grayish-blue;
+      li {
+        + * {
+          border-top: 1px solid $very-light-grayish-blue;
+        }
+      }
+    }
+    .inline-price {
+      color: $very-light-grayish-blue;
+    }
+    button {
+      background: $very-light-grayish-blue;
+      color: hsl(237, 63%, 64%);
+    }
+  }
+}
+
+// Toggle component
+
+.toggle-container {
+  color: $light-grayish-blue;
+  font-size: 1.2rem;
+  .toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    .checkbox {
+      position: absolute;
+      left: 50%;
+    }
+    .label {
+      width: 3.35em;
+      height: 1.7em;
+      background: linear-gradient(
+        to right,
+        hsl(236, 72%, 79%),
+        hsl(237, 63%, 64%)
+      );
+      border-radius: 50px;
+      cursor: pointer;
+      position: relative;
+      padding: 5px;
+      .ball {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        background-color: #fff;
+        width: 1.5em;
+        height: 1.5em;
+        transition: transform 0.2s linear;
+      }
+    }
+    .checkbox:checked + .label .ball {
+      transform: translateX(1.65em);
+    }
+  }
+}

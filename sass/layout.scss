@@ -1,0 +1,69 @@
+.center-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-l {
+  width: 100%;
+}
+
+.cluster-l {
+  > * {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: -($default-font-size / 2);
+    > * {
+      margin: ($default-font-size/ 2);
+    }
+  }
+}
+
+.switcher-l > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: -($default-font-size / 2);
+  > * {
+    flex-grow: 1;
+    flex-basis: calc((45rem - 100%) * 999); //NOT WORKING AS  EXPECTED!
+    margin: $default-font-size / 2;
+  }
+  @media screen and (max-width: 930px) {
+    flex-direction: column;
+  }
+}
+
+.stack-card-l > * + * {
+  margin-top: 1.85rem;
+}
+
+.stack-large-l > * + * {
+  margin-top: 2.5rem;
+}
+
+.stack-large-l > .switcher-l {
+  margin-top: 2.6rem;
+}
+
+// Utilities
+.max-width-container-u {
+  max-width: 1440px;
+}
+
+.padding-4rem-u {
+  padding: 4rem;
+}
+
+.margin-vertical {
+  margin: 20px 0;
+  @media screen and (max-width: 930px) {
+    margin: 0;
+  }
+}
