@@ -65,9 +65,9 @@ body {
   margin: -7.5px; }
   .switcher-l > * > * {
     flex-grow: 1;
-    flex-basis: calc((45rem - 100%) * 999);
+    flex-basis: calc((75rem - 100%) * 999);
     margin: 7.5px; }
-  @media screen and (max-width: 930px) {
+  @media screen and (max-width: 75rem) {
     .switcher-l > * {
       flex-direction: column; } }
 
@@ -88,7 +88,7 @@ body {
 
 .margin-vertical {
   margin: 20px 0; }
-  @media screen and (max-width: 930px) {
+  @media screen and (max-width: 75rem) {
     .margin-vertical {
       margin: 0; } }
 
@@ -99,7 +99,7 @@ header h1 {
 .card {
   max-width: 23rem;
   width: 23rem;
-  padding: 2.5rem;
+  padding: 3.5rem;
   background-color: #fff;
   border-radius: 10px;
   color: #6d708d;

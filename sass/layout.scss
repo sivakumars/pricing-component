@@ -32,10 +32,10 @@
   margin: -($default-font-size / 2);
   > * {
     flex-grow: 1;
-    flex-basis: calc((45rem - 100%) * 999); //NOT WORKING AS  EXPECTED!
+    flex-basis: calc((75rem - 100%) * 999); //NOT WORKING AS  EXPECTED!
     margin: $default-font-size / 2;
   }
-  @media screen and (max-width: 930px) {
+  @media screen and (max-width: 75rem) {
     flex-direction: column;
   }
 }
@@ -63,7 +63,7 @@
 
 .margin-vertical {
   margin: 20px 0;
-  @media screen and (max-width: 930px) {
+  @media screen and (max-width: 75rem) {
     margin: 0;
   }
 }
